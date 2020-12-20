@@ -1,34 +1,32 @@
-User-agent: *
-Disallow: /
 User-agent: Baiduspider
-Disallow: /
+Disallow: 
 User-agent: Sosospider
-Disallow: /
+Disallow: 
 User-agent: sogou spider
-Disallow: /
+Disallow: 
 User-agent: YodaoBot
-Disallow: /
+Disallow: 
 User-agent: Googlebot
-Disallow: /
+Disallow: 
 User-agent: Slurp
-Disallow: /
+Disallow: 
 User-agent: Teoma
-Disallow: /
+Disallow: 
 User-agent: twiceler
-Disallow: /
+Disallow: 
 User-agent: MSNBot
-Disallow: /
+Disallow: 
 User-agent: Robozilla
-Disallow: /
+Disallow: 
 User-agent: Gigabot
-Disallow: /
+Disallow: 
 User-agent: googlebot-image
-Disallow: /
+Disallow: 
 User-agent: googlebot-mobile
-Disallow: /
+Disallow: 
 User-agent: yahoo-mmcrawler
-Disallow: /
+Disallow: 
 User-agent: yahoo-blogs/v3.9
-Disallow: /
+Disallow: 
 User-agent: psbot
-Disallow: /
+Disallow: 
