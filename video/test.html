@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+<link rel="icon" type="image/x-icon" href="/nanachi.ico"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>来自深渊_启程的黎明</title>
+<link rel="stylesheet" href="//cdn.bootcss.com/video.js/6.0.0-RC.5/alt/video-js-cdn.min.css">
+<script src="http://cdn.bootcss.com/video.js/6.0.0-RC.5/alt/video.novtt.min.js"></script>
+<script>
+var vList = ['https://video.nanachi.sh/testaa', 'https://video.nanachi.sh/testab', 'https://video.nanachi.sh/testac', 'https://video.nanachi.sh/testad']; // 初始化播放列表 
+       var vLen = vList.length; // 播放列表的长度 
+       var curr = 0; // 当前播放的视频 
+        
+       var video = videojs("my_video_1", {}, function () {
+           this.on('ended', function () {
+               play();
+               function play(e) {
+                   video.src(vList[curr]);
+                   video.load();
+                   video.play();
+                   curr++;
+                   if (curr >= vLen) {
+                       curr = 0; // 播放完了，重新播放 
+                   }
+               }
+           })
+       })
+</script>
 </head>
-<script>
-    function callback(buffer, sourceBuffer){
-        sourceBuffer.appendBuffer(buffer);
-        console.log(buffer.byteLength);
-    };
-
-    function get(url, callback, sourceBuffer) {
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', url, true);
-        xhr.responseType = 'arraybuffer';
-        xhr.send();
-        xhr.onload = function() {
-            callback(xhr.response, sourceBuffer);
-        };
-    };
-</script>
 <body>
-<video id="v1" controls autoplay></video>
-<script>
-    var ms1 = new MediaSource();
-    var video1 = document.querySelector('#v1');
-    video1.src = window.URL.createObjectURL(ms1);
-    ms1.addEventListener('sourceopen', function(e) {
-        var sourceBuffer = ms1.addSourceBuffer('video/webm; codecs="opus,vp9"');
-        get('https://video.nanachi.sh/Made in Abyss: Journey's Dawn.webm', callback, sourceBuffer);
-    }, false);
-</script>
+<video id="my_video_1" class='video-js vjs-default-skin vjs-big-play-centered' controls preload='auto' width="450" height="375" data-setup='{}' autoplay="autoplay">
+                <source src='https://video.nanachi.sh/testaa' type='video/webm'>
+            </video>
+<br><a href="https://nanachi.sh" class="button" style="font-family; font-size: 24px;">返回</a>
 </body>
 </html>
