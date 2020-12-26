@@ -11,17 +11,14 @@
 
     <script type="text/javascript">
         var vList = ['//repo.bfw.wiki/bfwrepo/video/modushanghai.mp4', '//repo.bfw.wiki/bfwrepo/video/5d8449e2482ad.mp4']; // 初始化播放列表
-        var vLen = vList.length; // 播放列表的长度
-        var curr = 0; // 当前播放的视频
+        var vLen = vList.length;
+        var curr = 0;
         var video = document.getElementById('video');
         video.addEventListener('ended', play, false);
         play();
-
         function play(e) {
             video.src = vList[curr];
-            video.load(); // 如果短的话，可以加载完成之后再播放，监听 canplaythrough 事件即可
             video.play();
-
             curr++;
             if (curr >= vLen) curr = 0; // 播放完了，重新播放
         }
