@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="icon" type="image/x-icon" href="/nanachi.ico"/>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>来自深渊_深沉灵魂的黎明</title>
-<link href="//vjs.zencdn.net/7.8.2/video-js.min.css" rel="stylesheet">
-<script src="//vjs.zencdn.net/7.8.2/video.min.js"></script>
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
 </head>
+<script>
+    function callback(buffer, sourceBuffer){
+        sourceBuffer.appendBuffer(buffer);
+        console.log(buffer.byteLength);
+    };
+
+    function get(url, callback, sourceBuffer) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', url, true);
+        xhr.responseType = 'arraybuffer';
+        xhr.send();
+        xhr.onload = function() {
+            callback(xhr.response, sourceBuffer);
+        };
+    };
+</script>
 <body>
-<br><a href="https://nanachi.sh" class="button" style="font-family; font-size: 24px;">返回</a>
+<video id="v1" controls autoplay></video>
+<script>
+    var ms1 = new MediaSource();
+    var video1 = document.querySelector('#v1');
+    video1.src = window.URL.createObjectURL(ms1);
+    ms1.addEventListener('sourceopen', function(e) {
+        var sourceBuffer = ms1.addSourceBuffer('video/webm; codecs="opus,vp9"');
+        get('https://video.nanachi.sh/Made in Abyss: Journey's Dawn.webm', callback, sourceBuffer);
+    }, false);
+</script>
 </body>
 </html>
