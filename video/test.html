@@ -5,22 +5,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>来自深渊_深沉灵魂的黎明</title>
-<script src="https://cdn.jsdelivr.net/npm/nanachi@0.0.3/flv.min.js"> </script>
-<script>
-    if (flvjs.isSupported()) {//检查flvjs能否正常使用
-        var videoElement = document.getElementById('videoElement');//使用id选择器找到第二步设置的dom元素
-        var flvPlayer = flvjs.createPlayer({//创建一个新的flv播放器对象
-            type: 'flv',//类型flv
-            url: 'https://video.nanachi.sh/test.flv'//flv文件地址
-        });
-        flvPlayer.attachMediaElement(videoElement);//将flv视频装载进video元素内
-        flvPlayer.load();//载入视频
-        flvPlayer.play();//播放视频，如果不想要自动播放，去掉本行
-    }
-</script>
+<link href="//vjs.zencdn.net/7.8.2/video-js.min.css" rel="stylesheet">
+<script src="//vjs.zencdn.net/7.8.2/video.min.js"></script>
 </head>
 <body>
-<video id="videoElement" controls></video>
 <br><a href="https://nanachi.sh" class="button" style="font-family; font-size: 24px;">返回</a>
 </body>
 </html>
