@@ -6,19 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>来自深渊_启程的黎明</title>
 <script src="https://cdn.jsdelivr.net/npm/nanachi@0.0.3/flv.min.js"></script>
-<video id="nanachi"></video>
-<script>
-   if (flvjs.isSupported()) {
-    var nanachi = document.getElementById('nanachi');
-    var flvPlayer = flvjs.createPlayer({
-        type: 'flv',
-        url: 'https://video.nanachi.sh/Made in Abyss: Journey's Dawn.flv'
-    });
-    flvPlayer.attachMediaElement(videoElement);
-    flvPlayer.load();
-    flvPlayer.play();
-   }
-</script>
+<video name="videoElement" class="centeredVideo" controls="" autoplay="" src="https://video.nanachi.sh/Made in Abyss: Dawn of the Deep Soul.flv">
+                    Your browser is too old which doesn't support HTML5 video.
+</video>
+<body>
 <br><a href="https://nanachi.sh" style="font-family; font-size: 24px;">返回</a>
 </body>
 </html>
