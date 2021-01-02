@@ -2,7 +2,7 @@
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://nanachi.sh/</loc>
-        <lastmod>2020-12-27</lastmod>
+        <lastmod>2021-01-02</lastmod>
     </url>
     <url>
         <loc>https://nanachi.sh/video/1.html</loc>
@@ -15,5 +15,9 @@
     <url>
         <loc>https://nanachi.sh/video/3.html</loc>
         <lastmod>2020-12-28</lastmod>
+    </url>
+    <url>
+        <loc>https://nanachi.sh/image/nanachi.html</loc>
+        <lastmod>2021-01-02</lastmod>
     </url>
 </urlset>
