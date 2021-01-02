@@ -18,12 +18,22 @@
     float: left;
     display: inline;
 }
+.img {
+ max-width: 128px;
+ max-height: 128px;
+ height:auto;
+ zoom:expression( function(e) {
+if(e.width>e.height) {if (e.width>128) { e.height = e.height*(128 /e.width); e.width=128; }}
+else {if (e.height>128) { e.width = e.width*(128 /e.height); e.height=128; }}
+e.style.zoom = '1';     }(this));
+ overflow:hidden; 
+}
 </style>
 </head>
 <body>
 <div>
-<img src="https://cdn.jsdelivr.net/npm/nanachi@0.1.1/2.webp" alt="nanachi" width="100%"  class="fl nanachi">
-<img src="https://cdn.jsdelivr.net/npm/nanachi@0.1.1/1.webp" alt="nanachi" width="100%"  class="fl nanachi">
+<img src="https://cdn.jsdelivr.net/npm/nanachi/2.webp" alt="nanachi" width="100%" class="img fl nanachi">
+<img src="https://cdn.jsdelivr.net/npm/nanachi/1.webp" alt="nanachi" width="100%" class="img fl nanachi">
 </div>
 </body>
 </html>
