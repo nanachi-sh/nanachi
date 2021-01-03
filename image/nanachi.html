@@ -18,45 +18,17 @@
     vertical-align:middle;
     margin:8px;
 }
-.bigimg{
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background: rgba(0,0,0,.3);
-    top: 0;
-    display: none;
-}
-
-.bigimg img{
-    width: 100%;
-    position: fixed;
-    top: auto;
-    cursor: pointer;
-}
 </style>
 </head>
 <body>
-<div  onclick="imgbig();">
-<img src="https://cdn.jsdelivr.net/npm/nanachi/1.webp" alt="nanachi 娜娜奇 Made in Abyss" class="nanachi_a" id="imgsrc">
-<img src="https://cdn.jsdelivr.net/npm/nanachi/2.webp" alt="nanachi 娜娜奇 Made in Abyss" class="nanachi_a" id="imgsrc">
-<img src="https://cdn.jsdelivr.net/npm/nanachi/3.webp" alt="nanachi 娜娜奇 Made in Abyss" class="nanachi_a" id="imgsrc">
-<img src="https://cdn.jsdelivr.net/npm/nanachi/4.webp" alt="nanachi 娜娜奇 Made in Abyss" class="nanachi_a" id="imgsrc">
-<img src="https://cdn.jsdelivr.net/npm/nanachi/5.webp" alt="nanachi 娜娜奇 Made in Abyss" class="nanachi_a" id="imgsrc">
-<img src="https://cdn.jsdelivr.net/npm/nanachi/6.webp" alt="nanachi 娜娜奇 Made in Abyss" class="nanachi_a" id="imgsrc">
-<img src="https://cdn.jsdelivr.net/npm/nanachi/7.webp" alt="nanachi 娜娜奇 Made in Abyss" class="nanachi_a" id="imgsrc">
-<div id="bigimg" onclick="closeimg();"></div>
-<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-<script>
-function imgbig() {
-    var imgsrc = $('#imgsrc').attr('src');
-    $("#bigimg").css("display","block");
-    $("#bigimg").html("<img src="+imgsrc+" />");
-}
-
-function closeimg() {
-    $("#bigimg").css("display","none");
-}
-</script>
+<div>
+<img src="https://cdn.jsdelivr.net/npm/nanachi/1.webp" alt="nanachi 娜娜奇 Made in Abyss" class="nanachi_a">
+<img src="https://cdn.jsdelivr.net/npm/nanachi/2.webp" alt="nanachi 娜娜奇 Made in Abyss" class="nanachi_a">
+<img src="https://cdn.jsdelivr.net/npm/nanachi/3.webp" alt="nanachi 娜娜奇 Made in Abyss" class="nanachi_a">
+<img src="https://cdn.jsdelivr.net/npm/nanachi/4.webp" alt="nanachi 娜娜奇 Made in Abyss" class="nanachi_a">
+<img src="https://cdn.jsdelivr.net/npm/nanachi/5.webp" alt="nanachi 娜娜奇 Made in Abyss" class="nanachi_a">
+<img src="https://cdn.jsdelivr.net/npm/nanachi/6.webp" alt="nanachi 娜娜奇 Made in Abyss" class="nanachi_a">
+<img src="https://cdn.jsdelivr.net/npm/nanachi/7.webp" alt="nanachi 娜娜奇 Made in Abyss" class="nanachi_a">
 </div>
 <a href="https://nanachi.sh" style="font-family; font-size: 21px;">返回</a>
 </body>
