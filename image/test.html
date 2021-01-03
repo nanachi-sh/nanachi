@@ -43,30 +43,21 @@
             cursor: pointer;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+
 </head>
 <body>
-    <h1>图片预览 - 放大/缩小</h1>
-    <!-- 图片容器 -->
-    <div id="imgdiv" onclick="imgbig();">
-        <img src="https://cdn.jsdelivr.net/npm/nanachi/1.webp" id="imgsrc" />
-        <img src="https://cdn.jsdelivr.net/npm/nanachi/2.webp" id="imgsrc1" />
-    </div>
-
-    <!-- 放大遮罩层 -->
-    <div id="bigimg" onclick="closeimg();"></div>
-</body>
-
-<!-- JS -->
-<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-<script>
-function imgbig() {
-    var imgsrc = $('#imgsrc').attr('src');
-    $("#bigimg").css("display","block");
-    $("#bigimg").html("<img src="+imgsrc+" />");
-}
-
-function closeimg() {
-    $("#bigimg").css("display","none");
-}
+<script type="text/javascript">
+    $(function () {
+        $("img.dialog").click(function() {
+            var large_image = '<img src= ' + $(this).attr("src") + '></img>';
+            $('#dialog_large_image').html($(large_image).animate({ height: '50%', width: '50%' }, 500));
+        });
+    });
 </script>
+<div>
+    <img class="dialog" src="https://cdn.jsdelivr.net/npm/nanachi/1.webp">
+    <div id="dialog_large_image"></div>
+</div>
+</body>
 </html>
