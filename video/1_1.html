@@ -5,24 +5,22 @@
 <link rel="icon" type="image/x-icon" href="https://cdn.jsdelivr.net/npm/nanachi"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>来自深渊_启程的黎明</title>
-<meta name="keywords" content="来自深渊启程的黎明,来自深渊,娜娜奇,nanachi,启程的黎明"/>
-<meta name="description" content="来自深渊,nanachi,娜娜奇,来自深渊在线观看,来自深渊剧场版在线观看,启程的黎明,来自深渊启程的黎明"/>
-<meta name="renderer" content="webkit"/>
-<meta http-equiv="Cache-Control" content="no-transform"/> 
-<meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <style>
+      .box {
+        width:600px;
+        height:400px;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/easywasmplayer/EasyWasmPlayer.js"></script>
 </head>
 <body>
-<h1 style="font-family:arial;color:chocolate;font-size:18px;">来自深渊_剧场版_上_启程的黎明_在线播放_1080P标准</h1>
-<h2 style="font-family:arial;color:chocolate;font-size:16px;">视频详细参数:
-<p style="font-family:arial;color:teal;font-size:12px;">视频码率: 1176 Kbps
-</br>音频码率: 320 Kbps
-</br>视频格式: Webm
-</br>视频编码: vp9
-</br>音频编码: opus
-</br>视频分辨率: 1920x1080
-</p>
-</h2>
-<video controls="" preload="auto" controlslist="nodownload" oncontextmenu="return false" width="100%"> <source src="https://video.nanachi.sh/Made in Abyss: Journey's Dawn.webm.1080p" type="video/webm"></video>
+    <div class="box">
+      <div id="Player"></div>
+    </div>
+    <script>
+      var Player = new WasmPlayer(null,'Player'，callbackFun,{cbUserPtr:this, decodeType:"auto", openAudio:1, BigPlay:false, Height:true});
+      Player.play('https://video.nanachi.sh/1.mp4', 1)
+    </script>
 </br><a href="https://nanachi.sh" style="font-family; font-size: 16px;">返回</a>
 </body>
 </html>
